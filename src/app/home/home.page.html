@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <button (click)="agregarAlgo()">Agregar</button>
+    <br>
+    <button (click)="eliminarAlgo()">eliminar</button>
+    <br>
+    <button (click)="editarAlgo()">editar</button>
+    <br>
+    <button (click)="buscarTodo()">buscar todo</button>
+    <br>
+    <button (click)="buscarUno()">buscar uno</button>
+    <br>
+    ----------------------------
+    <br>
+
+    <table width="100%" border="1">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Edad</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let u of usuario">
+          <td>{{u.nombre}}</td>
+          <td>{{u.edad}}</td>
+          <td>
+            <button (click)="eliminarUsuario(u.id)">
+              eliminar
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</ion-content>
